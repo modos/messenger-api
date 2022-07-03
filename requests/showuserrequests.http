@@ -1,0 +1,3 @@
+GET http://localhost:3000/api/v1/join_requests
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmM2I1ODQ5OS1hNTUwLTRjODYtOTY5MC00N2UyOWU5ZWMxMGQiLCJpYXQiOjE2NTMzOTg3OTgsImV4cCI6MTY1MzQwMjM5OH0.2b-V3lBHR_II4W9cEdQif9vOXlUuvwklOzuG_DdHW3o

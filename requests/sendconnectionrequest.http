@@ -1,0 +1,8 @@
+POST http://localhost:3000/api/v1/connection_requests
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MzNjMzJmMS1kZTZjLTQ1NWMtYmY3ZC1hMWY5Mzc0YWNhMmYiLCJpYXQiOjE2NTM0MzM0MDQsImV4cCI6MTY1MzQzNzAwNH0.KMmXr1pz1sMQJ8Zfzuw9ykYN_qvuUHXuU3mhK8pMRiM
+
+
+{
+  "groupId": "3119e76d-ba7c-498c-a383-80aab75890d2"
+}

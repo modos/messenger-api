@@ -1,0 +1,3 @@
+GET http://localhost:3000/api/v1/groups/my
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZGMwZWI1ZS0yYmMzLTRlYzktODZkZi1mMDIzNzU0NGVjZjUiLCJpYXQiOjE2NTMwODA4ODYsImV4cCI6MTY1MzA4NDQ4Nn0.8pkFd9kJj-82ud2jx7caxRV2exzp6IPZGSexmWkdki4

@@ -1,0 +1,8 @@
+POST http://localhost:3000/api/v1/join_requests
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0MzNjMzJmMS1kZTZjLTQ1NWMtYmY3ZC1hMWY5Mzc0YWNhMmYiLCJpYXQiOjE2NTMzOTg1ODIsImV4cCI6MTY1MzQwMjE4Mn0.MDk5Nkw-lO4A8x19-fhAUxcVRdrEKHLsLNlKMgH5OkU
+
+
+{
+  "groupId": "c6418a1b-3150-4fd1-9c11-dd468f2416e1"
+}

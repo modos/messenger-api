@@ -1,0 +1,13 @@
+{
+    "secret": "secret",
+    "db": {
+        "name": "api",
+        "url": "mongodb://localhost:27017/api",
+        "users": "users",
+        "groups": "groups",
+        "usergroups": "usergroups",
+        "requestgroups": "requestgroups",
+        "connectionrequests": "connectionrequests",
+        "chats": "chats"
+    }
+}

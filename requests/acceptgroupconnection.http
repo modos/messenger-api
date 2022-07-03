@@ -1,0 +1,7 @@
+POST http://localhost:3000/api/v1/connection_requests/accept
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJmM2I1ODQ5OS1hNTUwLTRjODYtOTY5MC00N2UyOWU5ZWMxMGQiLCJpYXQiOjE2NTM0MzM1MDYsImV4cCI6MTY1MzQzNzEwNn0.vx8Xa5kgSqvepgGCG93F_oFhBDosLRxfVD0VPzuAQGM
+
+{
+    "connectionRequestId": "f96c17be-bd04-40ed-8005-117174efa400"
+}

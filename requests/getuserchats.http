@@ -1,0 +1,3 @@
+GET http://localhost:3000/api/v1/chats
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3ZmQwOWU2NS1mNzU3LTQ5NmYtYWU5NS02Zjk2M2Y4ODY2YzMiLCJpYXQiOjE2NTMzMjAzMDEsImV4cCI6MTY1MzMyMzkwMX0.p5_cgIWB1qi8-wZ2jTRyFUTiu9cZjOefSdhSAR_3gnU
