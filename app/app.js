@@ -10,7 +10,8 @@ app.use(bodyParser.urlencoded({extended: true}))
 
 app.post('/api/v1/auth/signup', async (req, res) => {
 
-    const isUserAlreadyExist = db.isUserAlreadyExist(req.body.email)
+    console.log("fuck");
+    const isUserAlreadyExist = await db.isUserAlreadyExist(req.body.email)
 
     if (isUserAlreadyExist) {
         res.status(400).json({error: {message: "Bad request!"}})

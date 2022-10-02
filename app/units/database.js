@@ -1,5 +1,5 @@
 const crypto = require('crypto')
-const jwtToken = require('../units/jwtToken')
+const jwtToken = require('./jwtToken')
 const configs = require('../configs.json')
 
 let MongoClient = require('mongodb').MongoClient
@@ -38,7 +38,7 @@ async function insertUser (user) {
     const id = crypto.randomUUID()
     const token = jwtToken.generateToken(id)
     try {
-        client.db(configs.db.name).collection(configs.db.users).insertOne({...user, uuid: id, token: token})
+        await client.db(configs.db.name).collection(configs.db.users).insertOne({...user, uuid: id, token: token})
         return token
     } catch (error) {
         console.log(error)
