@@ -12,12 +12,14 @@
   "scripts": {
     "start": "node app.js",
     "nodemon": "nodemon --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "axios": "^0.27.2",
+    "jest": "^29.1.2",
     "nodemon": "^2.0.16"
   }
 }

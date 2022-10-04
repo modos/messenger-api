@@ -2,15 +2,15 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const jwtToken = require('./units/jwtToken')
 const db = require('./units/database')
+const validations = require('./units/validations')
 const app = express()
 const port = 3000
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
-app.post('/api/v1/auth/signup', async (req, res) => {
+app.post('/api/v1/auth/signup', validations.validateSignUpBody, async (req, res) => {
 
-    console.log("fuck");
     const isUserAlreadyExist = await db.isUserAlreadyExist(req.body.email)
 
     if (isUserAlreadyExist) {
