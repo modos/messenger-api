@@ -37,3 +37,14 @@ config.json:
 
 mongodb port is 27017 and nodejs port is 3000, feel free to edit.
 
+## How To Test
+i used Jest library for writing tests. if you ran the database on docker, you should first get into the container bash:
+```bash
+ docker exec -it messenger-app bash
+```
+to run the tests, simply execute this:
+```bash
+npm test
+```
+i didn't create another database for test(because it's just a test product), feel free to create seperate database for yourself.
+
