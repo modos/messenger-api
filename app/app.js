@@ -27,11 +27,11 @@ app.post('/api/v1/auth/signup', validations.validateSignUpBody, async (req, res)
 
 })
 
-app.post('/api/v1/auth/login', async (req, res) => {
+app.post('/api/v1/auth/login', validations.validateLoginBody, async (req, res) => {
     let freshToken = await db.findUserByLogin(req.body.email, req.body.password)
     
     if (freshToken) {
-        res.json({token: freshToken, message: "seccessful"})
+        res.json({token: freshToken, message: "successful"})
     }else {
         res.status(400).json({error: {message: "Bad request!"}})
     }
