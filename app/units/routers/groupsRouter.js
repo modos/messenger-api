@@ -1,20 +1,21 @@
 const express = require('express')
 const jwtToken = require('../jwtToken')
 const db = require('../database')
+const { validateCreateGroupBody } = require('../validations')
 const router = express.Router()
 
-router.post('', jwtToken.authenticateToken, async (req, res) => {
+router.post('', [jwtToken.authenticateToken, validateCreateGroupBody], async (req, res) => {
     let groupId = await db.createGroup(req.body.name, req.body.description, req.headers.authorization.split(" ")[1])
 
     if (groupId) {
-        res.json({
+        return res.json({
             group: {
                 id: groupId
             },
             message: "successful"
         })
     }else {
-        res.status(400).json({message: "Bad request!"})
+        return res.status(400).json({message: "Bad request!"})
     }
 })
 
