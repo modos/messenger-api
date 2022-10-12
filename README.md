@@ -48,3 +48,10 @@ npm test
 ```
 i didn't create another database for test(because it's just a test product), feel free to create seperate database for yourself.
 
+## Loggers
+Morgan Package used to logging http requests. logs will be written into logs/access.log file.
+
+```js
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), { flags: 'a' })
+app.use(morgan('combined', { stream: accessLogStream }))
+```

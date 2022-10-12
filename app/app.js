@@ -1,5 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const fs = require('fs')
+const morgan = require('morgan')
+const path = require('path')
 const app = express()
 const port = 3000
 
@@ -18,6 +21,9 @@ const joinRouter = require('./units/routers/joinRouter')
 // middlewares
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), { flags: 'a' })
+app.use(morgan('combined', { stream: accessLogStream }))
 
 // routes
 app.use('/api/v1/auth', authRouter)
