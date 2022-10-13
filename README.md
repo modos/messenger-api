@@ -49,9 +49,32 @@ npm test
 i didn't create another database for test(because it's just a test product), feel free to create seperate database for yourself.
 
 ## Loggers
-Morgan Package used to logging http requests. logs will be written into logs/access.log file.
+[Morgan](https://www.npmjs.com/package/morgan) Package used to log http requests. logs will be written into logs/access.log file.
 
 ```js
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'logs/access.log'), { flags: 'a' })
 app.use(morgan('combined', { stream: accessLogStream }))
 ```
+[Winston](https://www.npmjs.com/package/winston) package used to create custom logger. i created winston.js file just for sample, you can modify and use it.
+```js
+import { createLogger, format, transports, config } from 'winston';
+
+const customLogger = createLogger({
+
+    levels: config.syslog.levels,
+    format: combine(
+        timestamp({
+            format: 'YYYY-MM-DD HH:mm:ss'
+        })),
+    transports: [
+        new transports.File({ filename: '../logs/custom.log' })
+    ]
+});
+
+module.exports = {
+    customLogger
+}
+``` 
+
+## Requests
+Beside Postman, i used [REST Client](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.RestClient) Extension in VS Code to send https request. sample files are in requests folder.
